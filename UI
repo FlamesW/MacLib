@@ -197,7 +197,7 @@ function MacLib:Window(Settings)
 	local exit = Instance.new("TextButton")
 	exit.Name = "Exit"
 	exit.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
-	exit.Text = getgenv().CustomPath
+	exit.Text = ""
 	exit.TextColor3 = Color3.fromRGB(225, 225, 225)
 	exit.TextSize = 14
 	exit.AutoButtonColor = false
