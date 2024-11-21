@@ -1652,7 +1652,7 @@ function MacLib:Window(Settings)
 					buttonImage.BorderColor3 = Color3.fromRGB(0, 0, 0)
 					buttonImage.BorderSizePixel = 0
 					buttonImage.Position = UDim2.fromScale(1, 0.5)
-					buttonImage.Size = UDim2.fromOffset(20, 20)
+					buttonImage.Size = UDim2.fromOffset(17, 17)
 					buttonImage.Parent = button
 
 					local TweenSettings = {
