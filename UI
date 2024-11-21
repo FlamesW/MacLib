@@ -2,7 +2,7 @@ local MacLib = { Options = {}, Folder = "Maclib" }
 
 --// One At a Time
 if game:GetService("CoreGui"):FindFirstChild("MacLib") then
-	return
+    return
 end
 
 --// Services
@@ -31,7 +31,7 @@ local assets = {
 	userInfoBlurred = "rbxassetid://18824089198",
 	toggleBackground = "rbxassetid://18772190202",
 	togglerHead = "rbxassetid://18772309008",
-	buttonImage = "rbxassetid://10709791437",
+	buttonImage = "rbxassetid://10723375250",
 	searchIcon = "rbxassetid://86737463322606",
 	colorWheel = "rbxassetid://2849458409",
 	colorTarget = "rbxassetid://73265255323268",
