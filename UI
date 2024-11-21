@@ -31,7 +31,7 @@ local assets = {
 	userInfoBlurred = "rbxassetid://18824089198",
 	toggleBackground = "rbxassetid://18772190202",
 	togglerHead = "rbxassetid://18772309008",
-	buttonImage = "rbxassetid://120481148274350",
+	buttonImage = "rbxassetid://12333784627",
 	searchIcon = "rbxassetid://86737463322606",
 	colorWheel = "rbxassetid://2849458409",
 	colorTarget = "rbxassetid://73265255323268",
@@ -1652,7 +1652,7 @@ function MacLib:Window(Settings)
 					buttonImage.BorderColor3 = Color3.fromRGB(0, 0, 0)
 					buttonImage.BorderSizePixel = 0
 					buttonImage.Position = UDim2.fromScale(1, 0.5)
-					buttonImage.Size = UDim2.fromOffset(15, 15)
+					buttonImage.Size = UDim2.fromOffset(20, 20)
 					buttonImage.Parent = button
 
 					local TweenSettings = {
