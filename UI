@@ -4727,7 +4727,7 @@ function MacLib:Window(Settings)
 				configSection:Button({
 					Name = "Load Config",
 					Callback = function()
-                                                getgenv().DisableElements();task.wait(0.1);
+                                                getgenv().DisableElements();task.wait(0.5);
 						local success, returned = MacLib:LoadConfig(configSelection.Value)
 						if not success then
 							WindowFunctions:Notify({
