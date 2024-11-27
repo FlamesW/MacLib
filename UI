@@ -5779,7 +5779,7 @@ task.spawn(function()
                         PathDisplay.Text = Ping.." | "..CurrentDate.." | "..Time;
                         PathDisplay.TextSize = 11;
 
-                        PathUsername.Text = "RunTime: "..convertToHMS(time()).." / FPS: "..FPS;
+                        PathUsername.Text = "RunTime: "..convertToHMS(time()).." | FPS: "..FPS;
                         HeadShot.Visible = false;
                     end
                 end
