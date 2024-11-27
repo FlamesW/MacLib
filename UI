@@ -2,8 +2,6 @@ local MacLib = { Options = {}, Folder = "Maclib" }
 
 --// One At a Time
 if game:GetService("CoreGui"):FindFirstChild("MacLib") then
-    Window:Dialog({Title = Window.Settings.Title,Description = "Your script is already running!~",Buttons = {{Name = "Confirm",Callback = function()
-    end,},{Name = "Cancel"}}})
     return
 end
 
