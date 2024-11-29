@@ -5776,7 +5776,8 @@ task.spawn(function()
                         local HeadShot = v.Base.Sidebar.SidebarGroup.UserInfo.InformationGroup:FindFirstChild("Headshot");
 
                         PathDisplay.Text = Ping.." | "..CurrentDate.." | "..Time;PathDisplay.TextSize = 11;
-                        PathUsername.Text = "RunTime: "..convertToHMS(time());HeadShot.Visible = false;
+                        PathUsername.Text = "RunTime: "..convertToHMS(time());
+                        HeadShot.Visible = false;
                     end
                 end
             end)
