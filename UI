@@ -5767,7 +5767,6 @@ task.spawn(function()
             pcall(function()
                 local CurrentDate = os.date("%b %d, %Y");
                 local Ping = string.format("%.2f ms", game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue());
-                local FPS = math.round(1/game:GetService("RunService").RenderStepped:Wait());
                 local Time = os.date("%H:%M");
 
                 for _,v in ipairs(game:GetService("CoreGui"):GetChildren()) do
@@ -5776,11 +5775,8 @@ task.spawn(function()
                         local PathUsername = v.Base.Sidebar.SidebarGroup.UserInfo.InformationGroup.UserAndDisplayFrame:FindFirstChild("Username");
                         local HeadShot = v.Base.Sidebar.SidebarGroup.UserInfo.InformationGroup:FindFirstChild("Headshot");
 
-                        PathDisplay.Text = Ping.." | "..CurrentDate.." | "..Time;
-                        PathDisplay.TextSize = 11;
-
-                        PathUsername.Text = "RunTime: "..convertToHMS(time()).." | FPS: "..FPS;
-                        HeadShot.Visible = false;
+                        PathDisplay.Text = Ping.." | "..CurrentDate.." | "..Time;PathDisplay.TextSize = 11;
+                        PathUsername.Text = "RunTime: "..convertToHMS(time())..";HeadShot.Visible = false;
                     end
                 end
             end)
