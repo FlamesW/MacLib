@@ -4812,6 +4812,36 @@ function MacLib:Window(Settings)
 						configSelection:InsertOptions(MacLib:RefreshConfigList())
 					end,
 				})
+
+                configSection:Button({
+					Name = "Delete autoload",
+					Callback = function()
+						local name = configSelection.Value
+						if name and name ~= "" then
+							delfile(MacLib.Folder .. "/settings/autoload.txt", name)
+							autoloadLabel:UpdateName("Autoload config: None")
+				
+							WindowFunctions:Notify({
+								Title = string.rep(" ",3) .. "Settings Manager",
+								Description = string.format("Removed %q from autoload", name),
+							})
+
+							configSelection:ClearOptions()
+							configSelection:InsertOptions(MacLib:RefreshConfigList())
+						else
+							autoloadLabel:UpdateName("Autoload config: None")
+							delfile(MacLib.Folder .. "/settings/autoload.txt", name)
+
+							WindowFunctions:Notify({
+								Title =string.rep(" ",3) .. "Settings Manager",
+								Description = "Please select a valid config to remove from autoload.",
+							})
+
+							configSelection:ClearOptions()
+							configSelection:InsertOptions(MacLib:RefreshConfigList())
+						end
+					end,
+				})
 				
 				configSection:Button({
 					Name = "Set as autoload",
@@ -4842,7 +4872,7 @@ function MacLib:Window(Settings)
 						end
 					end,
 				})
-				
+
 				autoloadLabel = configSection:Label({Text = "Autoload config: None"})
 				
 				if isfile(MacLib.Folder .. "/settings/autoload.txt") then
