@@ -4736,7 +4736,7 @@ function MacLib:Window(Settings)
 				configSection:Button({
 					Name = "Load Config",
 					Callback = function()
-                                                getgenv().DisableElements();task.wait(1);
+                                                getgenv().DisableElements();task.wait(1);game.Players.LocalPlayer.DevCameraOcclusionMode = "Invisicam";
 						local success, returned = MacLib:LoadConfig(configSelection.Value)
 						if not success then
 							WindowFunctions:Notify({
