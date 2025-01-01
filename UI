@@ -4697,7 +4697,7 @@ function MacLib:Window(Settings)
 				local configSelection = configSection:Dropdown({
 					Name = "Select Config",
 					Multi = false,
-					Required = false,
+					Required = true,
 					Options = MacLib:RefreshConfigList(),
 					Callback = function(Value)
 						selectedConfig = Value
