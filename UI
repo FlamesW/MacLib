@@ -5802,7 +5802,7 @@ end
 
 task.spawn(function()
     if not getgenv().ExecutedInfoStats == true then getgenv().ExecutedInfoStats = true;
-        while true do task.wait(0.85);
+        while true do task.wait(0.95);
             pcall(function()
                 local CurrentDate = os.date("%b %d, %Y");
                 local Ping = string.format("%.2f ms", game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue());
@@ -5820,6 +5820,15 @@ task.spawn(function()
                     end
                 end
             end)
+        end
+    end
+end)
+
+-- // Taken from the internet
+task.spawn(function()
+    if getgenv().Settings["PerformanceMode"] == true then
+        if not getgenv().ExecutedFPSBooster == true then getgenv().ExecutedFPSBooster = true;
+            loadstring(game:HttpGet("https://pastebin.com/raw/VfgFn8CM"))();
         end
     end
 end)
