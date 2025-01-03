@@ -5825,12 +5825,3 @@ task.spawn(function()
 end)
 
 return MacLib
-
--- // Taken from the internet
-task.spawn(function()
-    if getgenv().Settings["PerformanceMode"] == true then
-        if not getgenv().ExecutedFPSBooster == true then getgenv().ExecutedFPSBooster = true;
-            loadstring(game:HttpGet("https://pastebin.com/raw/VfgFn8CM"))();
-        end
-    end
-end)
