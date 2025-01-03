@@ -5824,6 +5824,8 @@ task.spawn(function()
     end
 end)
 
+return MacLib
+
 -- // Taken from the internet
 task.spawn(function()
     if getgenv().Settings["PerformanceMode"] == true then
@@ -5832,5 +5834,3 @@ task.spawn(function()
         end
     end
 end)
-
-return MacLib
